@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.turtleboi.turtlenet</groupId>
+    <artifactId>TurtleNet-Parent</artifactId>
+    <version>1.0.0-alpha.1</version>
+    <packaging>pom</packaging>
+
+    <name>TurtleNet</name>
+    <description>A network to handle user data and communication between applications. This is the parent for all modules.</description>
+    <url>http://github.com/TurtleException/TurtleNet</url>
+
+    <!--
+         ,,
+        (_ \_- -_
+          \ TUTL )
+            lU lU
+    -->
+
+    <modules>
+        <!-- Dev-exposed API library -->
+        <module>TurtleNet-API</module>
+
+        <!-- Core functionality for standalone apps -->
+        <module>TurtleNet-Core</module>
+
+        <!-- Standalone applications -->
+        <module>TurtleNet-Client</module>
+        <module>TurtleNet-Server</module>
+    </modules>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>TurtleException</name>
+            <email>turtle.exception@gmail.com</email>
+            <url>https://turtleboi.de</url>
+            <organization>de.turtleboi</organization>
+            <organizationUrl>https://github.com/TurtleException</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/TurtleException/TurtleNet.git</connection>
+        <developerConnection>scm:git:ssh://github.com:TurtleException/TurtleNet.git</developerConnection>
+        <url>http://github.com/TurtleException/TurtleNet</url>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>16</source>
+                    <target>16</target>
+                </configuration>
+            </plugin>
+
+            <!-- GENERATE SOURCES -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- GENERATE JAVADOC -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
