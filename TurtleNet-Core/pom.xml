@@ -24,6 +24,19 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <build>
+        <resources>
+            <!-- Write version into resource file -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>version.properties</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>de.turtleboi.turtlenet</groupId>
