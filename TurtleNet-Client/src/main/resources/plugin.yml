@@ -1,0 +1,13 @@
+name: TurtleNet
+main: de.turtleboi.turtlenet.client.entrypoints.Spigot
+
+# Ensures that plugins using TurtleNet may load on STARTUP and makes server diagnostics possible
+load: STARTUP
+
+version: ${project.version}
+
+api-version: 1.20
+description: Dependency for TurtleNet plugins
+
+author: TurtleException
+website: https://github.com/TurtleException/TurtleNet

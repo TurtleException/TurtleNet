@@ -1,0 +1,7 @@
+name: TurtleNet
+main: de.turtleboi.turtlenet.client.entrypoints.BungeeCord
+
+version: ${project.version}
+
+description: Dependency for TurtleNet plugins
+author: TurtleException

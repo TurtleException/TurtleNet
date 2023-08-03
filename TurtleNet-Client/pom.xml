@@ -24,11 +24,39 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>bungeecord-repo</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>de.turtleboi.turtlenet</groupId>
             <artifactId>TurtleNet-Core</artifactId>
             <version>1.0.0-alpha.1</version>
+        </dependency>
+
+        <!-- Entrypoint: Spigot server -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.20-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+        <!-- Entrypoint: BungeeCord server -->
+        <dependency>
+            <groupId>net.md-5</groupId>
+            <artifactId>bungeecord-api</artifactId>
+            <version>1.20-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>
